@@ -1,0 +1,30 @@
+﻿@model EvolentContactInfo.Models.Contact
+@{
+    ViewBag.Title = "Edit";
+}
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm("UpdateContact", "Contact", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })<br />
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })<br />
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })<br />
+    @Html.LabelFor(m => m.PhoneNumber)
+    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })<br />
+    @Html.LabelFor(m => m.Status)<br />
+    @Html.RadioButtonFor(m => m.Status, "Active", new { id = "active" }) @Html.Label("Active")
+    @Html.RadioButtonFor(m => m.Status, "InActive", new { id = "inactive" }) @Html.Label("InActive")<br />
+    @Html.ValidationMessageFor(m => m.Status, "", new { @class = "text-danger" })<br />
+    @Html.HiddenFor(m => m.Id, new { @class = "form-control" })
+
+    <input type="submit" id="editButton" class="btn btn-info" style="width:70px;" value="Update" />
+    <input type="button" value="Cancel" class="btn btn-danger" data-dismiss="modal" />
+}
