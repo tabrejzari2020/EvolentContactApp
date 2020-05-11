@@ -13,7 +13,7 @@ To proceed with smooth installation you should have VisualStudio 2013 or above w
 
 Run Visual studio and please navigate to downloaded folder and open .sln file in visual studio in order to run this app locally.
 
-Then build the application which will download the required references.
+Then build the application which will download the required references. And run to explore the functionality.
 
 Features
 Expected functionality:
