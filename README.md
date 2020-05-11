@@ -4,7 +4,7 @@ Designed and implemented a production ready application for maintaining contact 
 
 Technology used: ASP.NET MVC 5
 
-Installation
+Installation steps :
 
 To proceed with smooth installation you should have VisualStudio 2013 or above with .NetFramework 4.5 or above installed in your system.
 
@@ -12,11 +12,14 @@ Run Visual studio and please navigate to downloaded folder and open .sln file in
 
 Then build the application which will download the required references. And run to explore the functionality.
 
-Features
+Features :
 
 Expected functionality:
 
 Add a contact
+
 List contacts
+
 Edit contact
+
 Delete contact
